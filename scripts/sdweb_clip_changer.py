@@ -91,6 +91,15 @@ def hijack_hijack(sd_model):
     # apply
     sd_model = apply_clip(sd_model)
 
+    # apply lowvram/medvram if needed
+    if shared.cmd_opts.lowvram or shared.cmd_opts.medvram:
+        from modules import lowvram
+        lowvram.setup_for_low_vram(sd_model, shared.cmd_opts.medvram)
+        print(f"  VRAM-mode: {'LOWVRAM' if shared.cmd_opts.lowvram else 'MEDVRAM'}")
+    else:
+        sd_model.to(shared.device)
+        print(f"  VRAM-mode: None")
+
     # re-do hijack
     sd_hijack.model_hijack.hijack(sd_model)
 

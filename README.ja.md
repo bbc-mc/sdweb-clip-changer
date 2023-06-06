@@ -7,6 +7,14 @@
 - [AUTOMATIC1111's Stable Diffusion Web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) 用の Extension です
 - CLIP エンコーダを他のものに差し替える機能と、設定画面を提供します
 
+## 更新情報
+
+- 2023/06/06: オプションで lowvram/midvram を選択した場合の処理を追加
+  
+   - lowvram/midvram を選択した場合に clip changer 適用後にモデルが cpu と gpu に分かれて配置されてしまう問題に対応
+
+
+
 ## インストール方法
 
 - `Extensions` タブを開く

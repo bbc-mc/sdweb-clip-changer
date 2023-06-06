@@ -7,6 +7,14 @@
 - This is Extension for [AUTOMATIC1111's Stable Diffusion Web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 - Add feature to change CLIPTextModel and CLIPTokenizer
 
+
+
+## Update
+
+- 2023/06/06: fix: add support for lowvram/midvram
+  
+   - Fix problem about `tensor should load on same device` when use option `lowvram` `midvram`.
+
 ## How to install
 
 - Open `Extensions` on webui
